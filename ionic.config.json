@@ -1,0 +1,7 @@
+{
+  "name": "grennland",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
