@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-tabs',
@@ -6,7 +8,15 @@ import { Component } from '@angular/core';
   styleUrls: ['tabs.page.scss']
 })
 export class TabsPage {
+  constructor(public navCtrl: NavController, private platform: Platform) {
+  }
 
-  constructor() {}
+  updateUser() {
+    this.navCtrl.navigateForward('/c-user');
+  }
 
+  paymentRoute(route: string) {
+    this.navCtrl.navigateForward([route]);
+  }
 }
+

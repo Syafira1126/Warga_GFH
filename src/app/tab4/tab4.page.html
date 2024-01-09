@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="--background: #3CB371">
+    <ion-row class="ion-align-items-center">
+      <!-- Logo column on the left -->
+      <ion-col size="8">
+        <img src="../../assets/image/gfh5.png" alt="" width="200px" />
+      </ion-col>
+
+      <!-- Logout button column on the right -->
+      <ion-col size="4" class="ion-text-end">
+        <div class="d-flex justify-content-center align-items-center" (click)="logout()">
+          <span class="text-white">Logout</span>
+          <ion-icon name="log-out-outline" class="ms-1 text-white" style="font-size: 20px"></ion-icon>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="bg">
+
+  <div class="pt-1 mb-5">
+    <div *ngFor="let message of chatMessages">
+      <div class="w-100 d-flex justify-content-end px-1">
+        <div class="w-auto">
+          <ion-card class="my-1" style="border-radius: 20px; --background: #F5F7F8;">
+            <ion-card-header>
+              <div class="d-flex justify-content-end">
+                <div class="d-block text-end">
+                  <ion-card-title class="text-start w-100 d-flex justify-content-start" style="font-size: 17px;">{{message.pesan}}</ion-card-title>
+                  <div class="w-100 d-flex justify-content-end mt-1 text-end">
+                    <ion-card-subtitle class="text-end" style="font-size: 12px;">{{message.tgl_pesan}}</ion-card-subtitle>
+                  </div>
+                </div>
+              </div>
+            </ion-card-header>
+          </ion-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="msg-input">
+    <div class="d-flex bg-white shadow align-items-center justify-content-between px-1 ms-1" style="display:flex;border: 1px solid #043724; border-radius: 10px;">
+      <ion-textarea
+        autoGrow
+        rows="1"
+        placeholder="Send message"
+        class="ion-text-center" >
+      </ion-textarea>
+      <ion-buttons slot="end">
+        <ion-fab-button  size="small" class="icon" >
+          <ion-icon name="send"></ion-icon>
+        </ion-fab-button>
+      </ion-buttons>
+    </div>
+  </div>

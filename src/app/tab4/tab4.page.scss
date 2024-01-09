@@ -1,0 +1,39 @@
+ion-content {
+  --background: url("../../assets/image/branch.jpg");
+  position: center;
+  margin-left: 500px;
+}
+
+
+.text-white {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.msg-input{
+  position: fixed;
+  bottom: 5px;
+  width: 80%;
+  height: 60px;
+}
+
+
+ion-fab {
+  top: 82%;
+  position: fixed;
+  justify-content: left;
+}
+ion-fab-button::part(native) {
+  background-color: #3CB371;
+  border-radius: 15px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+    0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+  color: black;
+}
+
+ion-fab-button::part(native):hover::after {
+  background-color: #3CB371;
+}
+
+ion-fab-button::part(native):active::after {
+  background-color: #3CB371;
+}

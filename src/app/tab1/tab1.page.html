@@ -1,17 +1,69 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+  <ion-toolbar style="--background: #3CB371">
+    <ion-row class="ion-align-items-center">
+      <!-- Logo column on the left -->
+      <ion-col size="8">
+        <img src="../../assets/image/gfh5.png" alt="" width="200px" />
+      </ion-col>
+
+      <!-- Logout button column on the right -->
+      <ion-col size="4" class="ion-text-end">
+        <div class="d-flex justify-content-center align-items-center" (click)="logout()">
+          <span class="text-white">Logout</span>
+          <ion-icon name="log-out-outline" class="ms-1 text-white" style="font-size: 20px"></ion-icon>
+        </div>
+      </ion-col>
+    </ion-row>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+
+<ion-content [fullscreen]="true">
+  <div *ngFor="let warga of Warga" class="container">
+    <div class="">
+      <div class="card-profil mt-2">
+        <div class="w-100 d-block justify-content-center">
+          <div class="d-block">
+            <div class="d-flex justify-content-center text-center">
+              <span class="nama-user text-center">{{warga.nama}}</span>
+            </div>
+            <div class="d-flex justify-content-center mb-2">
+              <span
+                class="blok-kd"
+                style="
+                  font-weight: bold;
+                  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                "
+                >{{warga.nama_blok}}</span
+              >
+              <span
+                class="blok-kd"
+                style="
+                  font-weight: bold;
+                  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                "
+              >
+              .
+              </span>
+              <span
+                class="blok-kd"
+                style="
+                  font-weight: bold;
+                  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                "
+                >{{warga.no_blok}}</span
+              >
+            </div>
+          </div>
+          <img
+            src="{{warga.foto}}"
+            alt="Foto Profile"
+            class="foto"
+            width="100%"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
 </ion-content>

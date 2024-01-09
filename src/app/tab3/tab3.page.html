@@ -1,17 +1,47 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+  <ion-toolbar style="--background: #3CB371">
+    <ion-row class="ion-align-items-center">
+      <!-- Logo column on the left -->
+      <ion-col size="8">
+        <img src="../../assets/image/gfh5.png" alt="" width="200px" />
+      </ion-col>
+
+      <!-- Logout button column on the right -->
+      <ion-col size="4" class="ion-text-end">
+        <div class="d-flex justify-content-center align-items-center" (click)="logout()">
+          <span class="text-white">Logout</span>
+          <ion-icon name="log-out-outline" class="ms-1 text-white" style="font-size: 20px"></ion-icon>
+        </div>
+      </ion-col>
+    </ion-row>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+<ion-content [fullscreen]="true" class="bg">
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <div class="mx-1 mt-2 mb-5">
+      <ion-card class="my-2" style="border-radius: 15px; --background: #f5f7f8" *ngFor = 'let data of Data'>
+        <ion-card-header class="p-2 px-3">
+          <div class="d-block">
+            <div>
+              <span style="color: #043724; font-size: 20px; font-weight: 600;"
+                >{{data.judul_info}}</span
+              >
+            </div>
+            <div>
+              <span class="mt-2" style="color: #043724; font-size: 15px"
+                >{{data.informasi}}</span
+              >
+            </div>
+          </div>
+          <div class="w-100 d-flex justify-content-end mt-1 text-end">
+            <ion-card-subtitle style="font-size: 12px"
+              >{{data.tgl_info}}</ion-card-subtitle
+            >
+          </div>
+        </ion-card-header>
+      </ion-card>
+    </div>
 </ion-content>

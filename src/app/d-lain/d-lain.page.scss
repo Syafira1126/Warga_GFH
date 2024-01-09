@@ -1,0 +1,12 @@
+.bg {
+  /* The image used */
+  --background: url("../../assets/image/branch.jpg") repeat center center fixed;
+
+  /* Full height */
+  //height: 100%;
+
+
+  /* Center and scale the image nicely */
+  background-repeat: repeat;
+  background-size: cover;
+}

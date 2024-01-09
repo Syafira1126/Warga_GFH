@@ -1,0 +1,60 @@
+ion-content {
+  --background: url("../../assets/image/branch.jpg");
+  position: center;
+  margin-left: 500px;
+}
+
+/* Mengatur latar belakang dan warna teks header */
+ion-toolbar {
+  background-color: #6fe3a3d9; /* Ganti dengan warna latar belakang yang Anda inginkan */
+  color: #fff; /* Ganti dengan warna teks yang Anda inginkan */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+
+/* Mengatur judul di header */
+ion-title {
+  font-size: 24px; /* Ganti dengan ukuran font yang Anda inginkan */
+}
+
+/* Mengatur tombol "Logout" */
+.btn-success {
+  background-color: #28a745; /* Ganti dengan warna latar belakang yang Anda inginkan */
+  color: #fff; /* Ganti dengan warna teks yang Anda inginkan */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Hover state untuk tombol "Logout" */
+.btn-success:hover {
+  background-color: #218838; /* Ganti dengan warna latar belakang hover yang Anda inginkan */
+}
+
+/* Mengatur tabel */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Mengatur baris header tabel */
+.table th {
+  background-color: #007bff; /* Ganti dengan warna latar belakang yang Anda inginkan */
+  color: #fff; /* Ganti dengan warna teks yang Anda inginkan */
+  text-align: left;
+  padding: 10px;
+}
+
+/* Mengatur baris data dalam tabel */
+.table td {
+  border: 1px solid #ccc; /* Ganti dengan gaya border yang Anda inginkan */
+  padding: 10px;
+}
+
+.button {
+  font-size: 18px;
+  color: #0b50ff;
+  text-transform: uppercase;
+}

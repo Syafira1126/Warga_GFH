@@ -1,17 +1,61 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+  <ion-toolbar style="--background: #3CB371">
+    <ion-row class="ion-align-items-center">
+      <!-- Logo column on the left -->
+      <ion-col size="8">
+        <img src="../../assets/image/gfh5.png" alt="" width="200px" />
+      </ion-col>
+
+      <!-- Logout button column on the right -->
+      <ion-col size="4" class="ion-text-end">
+        <div class="d-flex justify-content-center align-items-center" (click)="logout()">
+          <span class="text-white">Logout</span>
+          <ion-icon name="log-out-outline" class="ms-1 text-white" style="font-size: 20px"></ion-icon>
+        </div>
+      </ion-col>
+    </ion-row>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-title class="Data Keluarga"></ion-title>
+  <ion-button class="btn-create" (click)="tambah()" expand="full" color="success">
+    <ion-icon name="add-outline" slot="start"></ion-icon>
+    Tambah
+  </ion-button>
+  <ion-card class="table-card" *ngFor="let data of Data">
+    <ion-card-content>
+      <ion-list lines="none">
+        <ion-item>
+          <ion-label slot="start">Nama:</ion-label>
+          <ion-label>{{ data.nama }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label slot="start">Status Keluarga:</ion-label>
+          <ion-label>{{ data.status_keluarga }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label slot="start">NIK:</ion-label>
+          <ion-label>{{ data.nik }}</ion-label>
+        </ion-item>
+      </ion-list>
+      <div class="d-flex justify-content-center">
+        <ion-card-subtitle style="font-size: 15px; letter-spacing: 1px"
+          >NIK : {{data.nik}} ({{data.stts_nik}})</ion-card-subtitle
+        >
+      </div>
+    <button
+      class="btn w-100 mt-2"
+      style="background: #043724; color: white"
+      (click)="editKK(data.kd_penduduk)"
+    >
+      Update
+    </button>
+    </ion-card-content>
+  </ion-card>
+  <!-- Tombol Logout dengan Ikon Kecil dan Ukuran Kecil -->
+  <ion-button expand="full" color="danger" size="small" (click)="logout()">
+    <ion-icon name="log-out" slot="start"></ion-icon>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  </ion-button>
 </ion-content>

@@ -1,0 +1,26 @@
+
+.bg {
+  /* The image used */
+  --background: url("../../assets/image/21.jpeg") repeat center center fixed;
+
+  /* Full height */
+  //height: 100%;
+
+
+  /* Center and scale the image nicely */
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+ion-label{
+  font-weight: 500;
+}
+
+.size-stacked{
+  font-size: 22px;
+  padding: 0px;
+}
+
+ion-item{
+  --background: transparent;
+}

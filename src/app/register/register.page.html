@@ -1,0 +1,27 @@
+<ion-content>
+  <ion-buttons>
+    <ion-icon
+      name="arrow-back-circle-outline"
+      style="font-size: 30px; color: white"
+      [routerLink]="['/login']"
+    ></ion-icon>
+  </ion-buttons>
+
+  <div class="logo"><img src="../../assets/image/gfh4.png" /></div>
+  <div class="title">
+    <h3>Registrasi</h3>
+  </div>
+
+  <ion-item class="wrap-input">
+    <ion-input [(ngModel)]="nik" placeholder="Masukan Nik"></ion-input>
+  </ion-item>
+
+  <ion-item class="wrap-input">
+    <ion-input [(ngModel)]="email" placeholder="Masukan Email"></ion-input>
+  </ion-item>
+
+  <div class="container-form-btn">
+    <button (click)="Insert()" class="form-btn custom-font"><b>Register</b></button>
+  </div>
+
+</ion-content>

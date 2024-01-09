@@ -1,0 +1,27 @@
+<ion-content>
+  <div class="logo"><img src="../../assets/image/gfh4.png" /></div>
+  <div class="title">
+    <h3>Login</h3>
+  </div>
+
+  <ion-item class="wrap-input">
+    <ion-input [(ngModel)]="username" placeholder="Masukan Username"></ion-input>
+  </ion-item>
+  <ion-item class="wrap-input">
+    <ion-input [(ngModel)]="password" placeholder="Masukan Password"></ion-input>
+  </ion-item>
+
+  <div class="container-form-btn">
+    <button (click)="login()" class="form-btn custom-font"><b>LOGIN</b></button>
+  </div>
+
+  <div class="mt-4 mx-2 d-flex justify-content-center">
+    <div class="text-white" style="font-size: 18px;">
+      Belum punya akun? <span class="text-primary border-bottom border-primary" style="font-weight: bold;" (click)="register()">Daftar</span>
+    </div>
+
+<div class="footer">
+Copyright © Greenland Forest Hill 2023
+</div>
+  </div>
+</ion-content>
